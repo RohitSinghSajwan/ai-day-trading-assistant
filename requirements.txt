@@ -1,0 +1,10 @@
+streamlit
+yfinance
+pandas
+requests
+beautifulsoup4
+newspaper3k
+nltk
+scikit-learn
+matplotlib
+ta
