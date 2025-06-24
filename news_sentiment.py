@@ -2,8 +2,13 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-nltk.download('vader_lexicon')
-sid = SentimentIntensityAnalyzer()
+import nltk
+from nltk.data import find
+
+try:
+    find('sentiment/vader_lexicon.zip')
+except:
+    nltk.download('vader_lexicon')
 
 def fetch_headlines(ticker):
     params = {"q": ticker, "tbm": "nws", "tbs": "qdr:d"}
